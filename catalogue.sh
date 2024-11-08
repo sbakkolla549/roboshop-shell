@@ -1,5 +1,5 @@
 source common.sh
-app_name=catalogue
+ app_name=catalogue
 
 nodejs_setup
 
@@ -12,7 +12,7 @@ dnf install mongodb-mongosh -y &>>$log_file
 status_check $?
 
 print_heading "Load Master Data"
-mongosh --host mongodb.rdevopsb81.online </app/db/master-data.js  &>>$log_file
+mongosh --host mongodb.sbakkolla.online </app/db/master-data.js  &>>$log_file
 status_check $?
 
 print_heading "Restart Catalogue Service"
